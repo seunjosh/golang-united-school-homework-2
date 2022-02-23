@@ -8,5 +8,33 @@ package square
 // CalcSquare(10.0, SidesSquare)
 // CalcSquare(10.0, SidesCircle)
 
-func CalcSquare(sideLen float64, sidesNum #yourTypeNameHere#) float64 {
+import (
+	"math"
+)
+
+
+
+type sideCircle struct {
+	SidesCircle float64
 }
+
+type sidesTriangle struct {
+	SidesTriangle float64
+}
+
+type sidesSquare struct {
+	SidesSquare float64
+}
+
+const (
+	SidesTriangle = 3
+	SidesCircle   = 0
+	SidesSquare   = 4
+)
+
+func CalcSquare(sideLen float64, sideNum sideCircle) float64 {
+    sideLen = math.Pi
+	return sideLen * sideLen * sideNum.SidesCircle
+    	
+}
+
